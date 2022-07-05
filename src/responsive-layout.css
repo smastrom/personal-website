@@ -1,0 +1,21 @@
+:root {
+  --gap: 20px;
+  --totalGap: calc(var(--gap) * 7);
+  --fiveQuintsGap: calc(var(--gap) * 5);
+  --fourQuintsGap: calc(var(--gap) * 4);
+  --viewport: calc(100vw - calc(var(--gap) * 2));
+  --fiveCols: calc((var(--viewport) / 6) * 5);
+  --fourCols: calc((var(--viewport) / 6) * 4);
+
+  @media (min-width: 1920px) {
+    --gap: 2%;
+  }
+}
+
+body {
+  padding: var(--gap) 30px;
+
+  @media (min-width: 1920px) {
+    padding: var(--gap);
+  }
+}
