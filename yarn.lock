@@ -130,6 +130,13 @@
     set-cookie-parser "^2.4.8"
     tiny-glob "^0.2.9"
 
+"@sveltejs/adapter-static@^1.0.0-next.35":
+  version "1.0.0-next.35"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.35.tgz#4cad9e9d670926e8d89361ded499c761dffa26e2"
+  integrity sha512-iIg5nCMJF2/s/Y7zmy9pzp+U3YDBL6OQKmwfJm2H3Afde/XlhOuNlSO6K//hxmLmvrd7Oh6Kb0MLhwVKp0cuUA==
+  dependencies:
+    tiny-glob "^0.2.9"
+
 "@sveltejs/adapter-vercel@1.0.0-next.59":
   version "1.0.0-next.59"
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.59.tgz#05e1139b39ffb2b7b73ac361a3b4a881512cd420"
@@ -1166,6 +1173,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash.random@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.random/-/lodash.random-3.2.0.tgz#96e24e763333199130d2c9e2fd57f91703cc262d"
+  integrity sha512-A6Vn7teN0+qSnhOsE8yx2bGowCS1G7D9e5abq8VhwOP98YHS/KrGMf43yYxA05lvcvloT+W9Z2ffkSajFTcPUA==
 
 lru-cache@^6.0.0:
   version "6.0.0"

@@ -1,0 +1,11 @@
+:root {
+  --foregroundColor: #bddbc8;
+  --foregroundAlphaColor: #bbf7d05f;
+  --headingsColor: #dcfce7;
+  --accentColor: #36ff80;
+  --backgroundColor: #1a332d;
+}
+
+.lightMode.greenPalette {
+  --foregroundColor: #bddbc8;
+}
