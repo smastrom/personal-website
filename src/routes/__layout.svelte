@@ -3,6 +3,7 @@
 
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
+  import MaskBackground from '../components/MaskBackground.svelte';
 
   import '../styles/preflight.css';
   import '../styles/responsive-layout.css';
@@ -13,6 +14,7 @@
 
 {#if browser}
   <Header />
+  <MaskBackground />
   <slot />
   <Footer />
 {/if}

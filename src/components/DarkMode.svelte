@@ -1,8 +1,8 @@
 <script context="module">
   import { onMount } from 'svelte';
 
-  import Moon from './Moon.svelte';
-  import Sun from './Sun.svelte';
+  import Moon from './MoonIcon.svelte';
+  import Sun from './SunIcon.svelte';
 
   const getTheme = () => {
     if (localStorage.theme === 'dark') {

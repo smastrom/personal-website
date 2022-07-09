@@ -5,7 +5,7 @@
   import { cubicOut } from 'svelte/easing';
 
   import shuffle from 'lodash.shuffle';
-  import Check from './Check.svelte';
+  import Check from './CheckIcon.svelte';
 </script>
 
 <script lang="ts">

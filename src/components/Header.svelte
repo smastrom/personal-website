@@ -1,6 +1,6 @@
 <script context="module">
   import DarkMode from './DarkMode.svelte';
-  import GitHub from './GitHub.svelte';
+  import GitHub from './GitHubIcon.svelte';
   import Logo from './Logo.svelte';
   import PaletteSwitcher from './PaletteSwitcher.svelte';
 </script>
