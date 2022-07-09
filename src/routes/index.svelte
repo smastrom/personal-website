@@ -1,4 +1,4 @@
-<script>
+<script context="module">
   import LogoBackground from '../components/LogoBackground.svelte';
 </script>
 
@@ -34,12 +34,12 @@
 </article>
 
 <style lang="postcss">
-  .title {
+  h1 {
     margin-top: var(--headerHeight);
     padding: 3rem 0;
     font-family: 'Basier Square';
     letter-spacing: -0.025ch;
-    color: #dcfce7;
+    color: var(--headingsColor);
     font-size: responsive 2.25rem 11.25rem;
     font-range: 768px 3840px;
     font-weight: 800;
@@ -55,7 +55,7 @@
     }
   }
 
-  .h2 {
+  h2 {
     letter-spacing: -0.025ch;
     font-weight: 700;
     font-size: responsive 1.25rem 4.5rem;
@@ -64,7 +64,7 @@
     color: var(--accentColor);
   }
 
-  .paragraph {
+  p {
     margin: 1rem 0 3rem 0;
     color: var(--foregroundColor);
     font-size: responsive 1rem 2.25rem;
@@ -79,8 +79,8 @@
     }
   }
 
-  .h2,
-  .paragraph {
+  h2,
+  p {
     @media (min-width: 769px) {
       max-width: var(--threeCols);
     }

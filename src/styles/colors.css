@@ -2,26 +2,53 @@
   --greenAccentColor: #36ff80;
   --lilleAccentColor: #a78bfa;
   --blueAccentColor: #22d3ee;
+  --easing: 200ms ease-out;
+}
 
+.dark-mode.green-palette {
   --foregroundColor: #bddbc8;
   --foregroundAlphaColor: #bbf7d05f;
   --headingsColor: #dcfce7;
-  --accentColor: #36ff80;
   --backgroundColor: #1a332d;
+  --accentColor: var(--greenAccentColor);
 }
 
-.lightMode.greenPalette {
-  --foregroundColor: #bddbc8;
-}
-
-.greenPalette {
-  --accentColor: #22d3ee;
-}
-
-.bluePalette {
+.dark-mode.blue-palette {
+  --foregroundColor: #bdd7db;
+  --foregroundAlphaColor: #bceff75f;
+  --headingsColor: #dcf8fc;
+  --backgroundColor: #1a3033;
   --accentColor: var(--blueAccentColor);
 }
 
-.lillePalette {
+.dark-mode.lille-palette {
+  --foregroundColor: #c4bddb;
+  --foregroundAlphaColor: #cbbcf75f;
+  --headingsColor: #e4dcfc;
+  --backgroundColor: #201a33;
+  --accentColor: var(--lilleAccentColor);
+}
+
+.light-mode.green-palette {
+  --foregroundColor: #bddbc8;
+  --foregroundAlphaColor: #bbf7d05f;
+  --headingsColor: #dcfce7;
+  --backgroundColor: #1a332d;
+  --accentColor: var(--greenAccentColor);
+}
+
+.light-mode.blue-palette {
+  --foregroundColor: #bdd7db;
+  --foregroundAlphaColor: #bceff75f;
+  --headingsColor: #dcf8fc;
+  --backgroundColor: #1a3033;
+  --accentColor: var(--blueAccentColor);
+}
+
+.light-mode.lille-palette {
+  --foregroundColor: #c4bddb;
+  --foregroundAlphaColor: #cbbcf75f;
+  --headingsColor: #e4dcfc;
+  --backgroundColor: #201a33;
   --accentColor: var(--lilleAccentColor);
 }

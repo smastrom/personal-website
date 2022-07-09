@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { flip } from 'svelte/animate';
   import { cubicOut } from 'svelte/easing';
+
   import shuffle from 'lodash.shuffle';
 </script>
 
@@ -31,6 +32,9 @@
   onMount(() => {
     document.documentElement.classList.add(palette);
     localStorage.setItem('palette', palette);
+    setTimeout(() => {
+      document.body.classList.add('transitions');
+    });
   });
 </script>
 
@@ -46,13 +50,18 @@
   </ul>
 </div>
 
-<style lang="postcss" scoped>
-  .nav {
+<style lang="postcss">
+  div {
     --buttonWidth: 18px;
     display: flex;
   }
 
-  .button {
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  button {
     transition: opacity 200ms ease-out;
     display: flex;
     box-sizing: content-box;
@@ -66,11 +75,6 @@
     &:hover {
       box-shadow: 0 0 0 2px var(--foregroundColor);
     }
-  }
-
-  .list {
-    display: flex;
-    gap: 20px;
   }
 
   .blue {

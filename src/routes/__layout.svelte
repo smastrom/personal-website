@@ -1,5 +1,6 @@
 <script>
   import { browser } from '$app/env';
+
   import Header from '../components/Header.svelte';
 
   import '../styles/preflight.css';

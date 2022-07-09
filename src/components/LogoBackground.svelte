@@ -11,7 +11,7 @@
 </svg>
 
 <style>
-  .logo-background {
+  svg {
     opacity: 0.5;
     position: absolute;
     bottom: -20%;

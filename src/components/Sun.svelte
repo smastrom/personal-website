@@ -1,17 +1,14 @@
-<script lang="ts">
+<script context="module">
   import { fly } from 'svelte/transition';
-
-  export let fillColor: string | undefined;
-  export let elemWidth: number | undefined;
 </script>
 
 <svg
   in:fly={{ x: -15, duration: 150 }}
   xmlns="http://www.w3.org/2000/svg"
-  width={elemWidth}
+  width={25}
   viewBox="0 0 24 24"
   fill="none"
-  stroke={fillColor}
+  stroke="var(--foregroundColor)"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"

@@ -1,5 +1,6 @@
 <script context="module">
   import { onMount } from 'svelte';
+
   import Moon from './Moon.svelte';
   import Sun from './Sun.svelte';
 
@@ -47,23 +48,21 @@
 </script>
 
 <button
-  class="button"
   on:click={switchTheme}
   type="switch"
   aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
 >
   {#if isDark}
-    <Sun fillColor="var(--foregroundColor)" elemWidth={25} />
+    <Sun />
   {:else}
-    <Moon fillColor="var(--foregroundColor)" elemWidth={25} />
+    <Moon />
   {/if}
 </button>
 
-<style lang="postcss" scoped>
-  .button {
+<style>
+  button {
     border: none;
     display: flex;
     padding: 10px;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 </style>

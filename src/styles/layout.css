@@ -9,5 +9,22 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   position: relative;
-  background: var(--backgroundColor);
+  background-color: var(--backgroundColor);
+}
+
+.transitions {
+  transition: background-color var(--easing);
+
+  & a {
+    transition: color var(--easing);
+  }
+
+  & article {
+    & h1,
+    & h2,
+    & p,
+    & strong {
+      transition: color var(--easing);
+    }
+  }
 }
