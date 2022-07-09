@@ -1,16 +1,19 @@
 <script context="module">
   import DarkMode from './DarkMode.svelte';
+  import GitHub from './GitHub.svelte';
   import Logo from './Logo.svelte';
   import PaletteSwitcher from './PaletteSwitcher.svelte';
 </script>
 
 <header>
-  <Logo elemWidth={40} fillColor="var(--headingsColor)" />
+  <Logo />
   <nav>
     <PaletteSwitcher />
     <DarkMode />
     <span />
-    <a href="https://github.com/smastrom" rel="noreferrer" target="_blank">GitHub</a>
+    <a href="https://github.com/smastrom" rel="noreferrer" target="_blank" aria-label="GitHub">
+      <GitHub />
+    </a>
   </nav>
 </header>
 
@@ -25,7 +28,6 @@
     left: 0;
     right: 0;
     border-bottom: 1px solid var(--foregroundAlphaColor);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 5;
@@ -43,12 +45,26 @@
 
   nav {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     align-items: center;
+
+    @media (min-width: 375px) {
+      gap: 15px;
+    }
+
+    @media (min-width: 390px) {
+      gap: 20px;
+    }
+
+    @media (min-width: 1280px) {
+      gap: 25px;
+    }
   }
 
   a {
-    color: var(--foregroundColor);
+    padding: 10px;
+    margin-right: -10px;
+    display: flex;
     font-weight: 700;
 
     &:hover {

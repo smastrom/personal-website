@@ -5,11 +5,12 @@
 <svg
   in:fly={{ x: -15, duration: 150 }}
   xmlns="http://www.w3.org/2000/svg"
-  width={25}
+  width="28"
+  height="28"
   viewBox="0 0 24 24"
   fill="none"
   stroke="var(--foregroundColor)"
-  stroke-width="2"
+  stroke-width="1.5"
   stroke-linecap="round"
   stroke-linejoin="round"
   ><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line

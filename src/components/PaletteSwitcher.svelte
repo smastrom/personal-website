@@ -9,6 +9,8 @@
 </script>
 
 <script lang="ts">
+  let navElement: HTMLDivElement;
+
   let isSelecting = false;
   let hasJustSelected = false;
   let hasJustConfirmed = false;
@@ -66,20 +68,43 @@
       document.body.classList.add('transitions');
     });
   });
+
+  const clickOutside = (node: HTMLElement) => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (!node.contains(event.target as HTMLElement) && event.target !== navElement) {
+        node.dispatchEvent(new CustomEvent('outsideClick'));
+      }
+    };
+    document.addEventListener('click', handleOutsideClick, true);
+    return {
+      destroy() {
+        document.removeEventListener('click', handleOutsideClick, true);
+      }
+    };
+  };
 </script>
 
-<div dir="rtl" style={`--colorChoices: ${colors.length}`}>
+<div
+  class="nav"
+  dir="rtl"
+  style={`--colorChoices: ${colors.length}`}
+  use:clickOutside
+  on:outsideClick={() => (isSelecting = false)}
+  bind:this={navElement}
+>
   {#if !isSelecting}
     <button
+      class="nav-button"
       style={`pointer-events: ${hasJustConfirmed ? 'none' : 'all'}`}
-      class={`nav-button ${palette.split('-')[0]}`}
       on:click={() => (isSelecting = true)}
     >
-      {#if hasJustConfirmed}
-        <div out:fade={{ duration: 150 }}>
-          <Check />
-        </div>
-      {/if}
+      <div class={`button-inner ${palette.split('-')[0]}`}>
+        {#if hasJustConfirmed}
+          <span out:fade={{ duration: 150 }}>
+            <Check />
+          </span>
+        {/if}
+      </div>
     </button>
   {/if}
 
@@ -87,41 +112,43 @@
     {#each palettes as palette, index (palette)}
       <button
         style={appendStyles(index)}
-        class={`${palette.split('-')[0]}`}
         on:click={() => setPalette(palette)}
         in:fly={{ x: 40, duration: 400 }}
         out:fly={{ x: 100, duration: 400 }}
         animate:flip={{ duration: 200, easing: cubicOut }}
       >
-        {#if index === 0}
-          <Check />
-        {/if}
+        <div class={`button-inner ${palette.split('-')[0]}`}>
+          {#if index === 0}
+            <Check />
+          {/if}
+        </div>
       </button>
     {/each}
   {/if}
 </div>
 
 <style lang="postcss">
-  div {
+  .nav {
     --buttonWidth: 18px;
     --borderWidth: 3px;
     --outlineWidth: 2px;
+    --padding: 10px;
+
     --edges: 2;
-    --spacing: 20px;
     --multiplier: calc(var(--colorChoices) - 1);
+    --spacing: calc(var(--padding) * 2);
 
     --allBorders: calc(var(--borderWidth)) * var(--multiplier);
     --allOutlines: calc(var(--outlineWidth)) * var(--multiplier);
-    --allSpacings: calc(var(--spacing) * var(--multiplier));
+    --allSpacings: calc(var(--spacing) * calc(var(--colorChoices) - 1));
     --outlineOverlap: calc(var(--outlineWidth) * var(--edges));
 
     --itemSize: calc(var(--buttonWidth) + var(--allBorders));
     --itemSizes: calc(var(--itemSize) * var(--colorChoices));
 
-    padding-right: var(--outlineWidth);
     width: calc(var(--itemSizes) + var(--allSpacings) + var(--outlineOverlap));
-    height: calc(var(--itemSize) + var(--allOutlines));
-    gap: var(--spacing);
+    height: calc(var(--itemSize) + var(--allOutlines) + var(--spacing));
+    padding-right: var(--outlineWidth);
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -132,6 +159,15 @@
   }
 
   button {
+    border: none;
+    padding: var(--padding);
+
+    &:first-of-type {
+      padding: var(--padding) 0 var(--padding) var(--padding);
+    }
+  }
+
+  .button-inner {
     position: relative;
     transition: opacity 200ms ease-out;
     display: flex;
@@ -148,6 +184,10 @@
 
     &:hover {
       outline: var(--outlineWidth) solid var(--foregroundColor);
+    }
+
+    & span {
+      display: flex;
     }
   }
 

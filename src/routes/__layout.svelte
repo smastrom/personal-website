@@ -1,7 +1,8 @@
-<script>
+<script context="module">
   import { browser } from '$app/env';
 
   import Header from '../components/Header.svelte';
+  import LogoBackground from '../components/LogoBackground.svelte';
 
   import '../styles/preflight.css';
   import '../styles/responsive-layout.css';
@@ -13,4 +14,8 @@
 {#if browser}
   <Header />
   <slot />
+  <!--   <LogoBackground /> -->
 {/if}
+
+<style>
+</style>

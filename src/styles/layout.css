@@ -6,8 +6,8 @@ html {
 }
 
 body {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   position: relative;
   background-color: var(--backgroundColor);
 }
