@@ -1,3 +1,7 @@
+:root {
+  --easing: 200ms ease-out;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,6 +14,27 @@ body {
   scroll-behavior: smooth;
   position: relative;
   background-color: var(--backgroundColor);
+
+  @media (min-width: 769px) {
+    background: url('/logo-background-tablet.svg'), var(--backgroundColor);
+    background-position: -10% 50%;
+    background-repeat: no-repeat;
+    background-size: 200%;
+  }
+
+  @media (min-width: 1366px) {
+    background: url('/logo-background-notebook.svg'), var(--backgroundColor);
+    background-position: -100% 50%;
+    background-repeat: no-repeat;
+    background-size: 120%;
+  }
+
+  @media (min-width: 1920px) {
+    background: url('/logo-background.svg'), var(--backgroundColor);
+    background-position: -100% 50%;
+    background-repeat: no-repeat;
+    background-size: 120%;
+  }
 }
 
 .transitions {

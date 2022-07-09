@@ -2,7 +2,7 @@
   import { browser } from '$app/env';
 
   import Header from '../components/Header.svelte';
-  import LogoBackground from '../components/LogoBackground.svelte';
+  import Footer from '../components/Footer.svelte';
 
   import '../styles/preflight.css';
   import '../styles/responsive-layout.css';
@@ -14,8 +14,5 @@
 {#if browser}
   <Header />
   <slot />
-  <!--   <LogoBackground /> -->
+  <Footer />
 {/if}
-
-<style>
-</style>

@@ -25,6 +25,22 @@
     faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
     quis nisi sit amet interdum. Donec sit amet cursus mi.
   </p>
+
+  <h2>Skills and Tech</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
+    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
+    faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
+    quis nisi sit amet interdum. Donec sit amet cursus mi.
+  </p>
+
+  <h2>Skills and Tech</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
+    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
+    faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
+    quis nisi sit amet interdum. Donec sit amet cursus mi.
+  </p>
 </article>
 
 <style lang="postcss">
@@ -36,7 +52,6 @@
   h1 {
     margin-top: var(--headerHeight);
     padding: 3rem 0;
-    font-family: 'Basier Square';
     letter-spacing: -0.025ch;
     color: var(--headingsColor);
     font-size: responsive 2.25rem 11.25rem;
@@ -58,7 +73,6 @@
     letter-spacing: -0.025ch;
     font-weight: 700;
     font-size: responsive 1.375rem 4.5rem;
-    font-family: 'Basier Square';
     font-range: 768px 3840px;
     color: var(--accentColor);
   }
@@ -67,7 +81,6 @@
     margin: 1rem 0 3rem 0;
     color: var(--foregroundColor);
     font-size: responsive 1.125rem 2.25rem;
-    font-family: 'Basier Square';
     letter-spacing: -0.015ch;
     font-range: 768px 3840px;
     line-height: 1.55;

@@ -1,17 +1,7 @@
-::before,
-::after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: currentColor;
-}
-
 html {
   line-height: 1.4;
   -webkit-text-size-adjust: 100%;
   font-weight: 400;
-  -moz-tab-size: 4;
-  tab-size: 4;
   font-size: 100%;
 }
 
@@ -21,11 +11,7 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -40,40 +26,7 @@ strong {
   font-weight: bolder;
 }
 
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-small {
-  font-size: 0.875rem;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
+button {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   font-weight: inherit; /* 1 */
@@ -81,28 +34,11 @@ textarea {
   color: inherit; /* 1 */
   margin: 0; /* 2 */
   padding: 0; /* 3 */
-}
-
-button,
-select {
   text-transform: none;
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
   -webkit-appearance: button; /* 1 */
   background-color: transparent; /* 2 */
   background-image: none; /* 2 */
-}
-
-:-moz-focusring {
-  outline: auto;
-}
-
-:-moz-ui-invalid {
-  box-shadow: none;
+  cursor: pointer;
 }
 
 blockquote,
@@ -127,27 +63,4 @@ menu {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
-}
-
-button,
-[role='button'] {
-  cursor: pointer;
-}
-
-:disabled {
-  cursor: default;
-}
-
-[hidden] {
-  display: none;
 }

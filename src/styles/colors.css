@@ -3,7 +3,6 @@
   --darkGreenAccentColor: #22c55e;
   --lilleAccentColor: #a78bfa;
   --blueAccentColor: #22d3ee;
-  --easing: 200ms ease-out;
 }
 
 .dark-mode.green-palette {
@@ -31,9 +30,9 @@
 }
 
 .light-mode.green-palette {
-  --foregroundColor: #bddbc8;
-  --foregroundAlphaColor: #bbf7d05f;
-  --headingsColor: #dcfce7;
+  --foregroundColor: #2b423a;
+  --foregroundAlphaColor: #2b423a5f;
+  --headingsColor: #2b423a;
   --backgroundColor: #f0fdf4;
   --accentColor: var(--darkGreenAccentColor);
 }
