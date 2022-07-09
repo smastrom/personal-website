@@ -9,9 +9,9 @@
 
 <style>
   footer {
-    margin-bottom: 2.5%;
     color: var(--foregroundColor);
-    font-size: responsive 1rem 1.75rem;
+    font-size: responsive 1.125rem 1.75rem;
+    font-range: 768px 3840px;
   }
 
   span {
