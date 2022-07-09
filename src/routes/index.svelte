@@ -3,27 +3,27 @@
 </script>
 
 <article>
-  <h1 class="title">
+  <h1>
     Hello, <strong>I'm Simone</strong>, graphic designer and frontend developer from Italy.
   </h1>
-  <h2 class="h2">Who am I?</h2>
-  <p class="paragraph">
+  <h2>Who am I?</h2>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
     at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
-    faucibus neque a convallis. <a class="link" href="/">Proin</a> laoreet enim eget condimentum
-    scelerisque. Duis vulputate quis nisi sit amet interdum. Donec sit amet cursus mi.
+    faucibus neque a convallis. <a href="/">Proin</a> laoreet enim eget condimentum scelerisque.
+    Duis vulputate quis nisi sit amet interdum. Donec sit amet cursus mi.
   </p>
 
-  <h2 class="h2">Skills and Tech</h2>
-  <p class="paragraph">
+  <h2>Skills and Tech</h2>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
     at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
     faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
     quis nisi sit amet interdum. Donec sit amet cursus mi.
   </p>
 
-  <h2 class="h2">Skills and Tech</h2>
-  <p class="paragraph">
+  <h2>Skills and Tech</h2>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
     at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
     faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
@@ -86,7 +86,7 @@
     }
   }
 
-  .link {
+  a {
     color: var(--foregroundColor);
     text-decoration: underline;
 

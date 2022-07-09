@@ -38,8 +38,8 @@
   });
 </script>
 
-<div class="nav">
-  <ul class="list" dir="rtl">
+<div>
+  <ul dir="rtl">
     {#each palettes as palette, _ (palette)}
       <button
         class={`button ${palette.split('-')[0]}`}
