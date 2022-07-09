@@ -61,7 +61,6 @@
 
 <style>
   button {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     border: none;
     display: flex;
     padding: 10px;

@@ -1,6 +1,6 @@
 <article>
   <h1>
-    Hello. <strong>I'm Simone</strong>, frontend developer from Italy.
+    Hello. <strong>I'm Simone</strong>, a frontend developer based in Italy.
   </h1>
   <h2>Who am I?</h2>
   <p>

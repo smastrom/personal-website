@@ -1,6 +1,7 @@
 <script context="module">
   import { browser } from '$app/env';
 
+  import Head from '../components/Head.svelte';
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
   import MaskBackground from '../components/MaskBackground.svelte';
@@ -13,6 +14,7 @@
 </script>
 
 {#if browser}
+  <Head />
   <Header />
   <MaskBackground />
   <slot />
