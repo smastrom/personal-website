@@ -1,10 +1,15 @@
 <script>
+  import DarkMode from './DarkMode.svelte';
   import Logo from './Logo.svelte';
+  import PaletteSwitcher from './PaletteSwitcher.svelte';
 </script>
 
 <header class="header">
-  <Logo elemWidth={40} fillColor="#dcfce7" />
+  <Logo elemWidth={40} fillColor="var(--headingsColor)" />
   <nav class="header--right">
+    <PaletteSwitcher />
+    <DarkMode />
+    <span class="divider" />
     <a
       class="header--right--github"
       href="https://github.com/smastrom"
@@ -35,9 +40,16 @@
     }
   }
 
+  .divider {
+    width: 1px;
+    height: 45px;
+    background-color: var(--foregroundAlphaColor);
+  }
+
   .header--right {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
   }
 
   .header--right--github {

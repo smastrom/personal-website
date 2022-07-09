@@ -2,10 +2,10 @@
   import LogoBackground from '../components/LogoBackground.svelte';
 </script>
 
-<h1 class="title">
-  Hello, <strong>I'm Simone</strong>, graphic designer and frontend developer from Italy.
-</h1>
 <article>
+  <h1 class="title">
+    Hello, <strong>I'm Simone</strong>, graphic designer and frontend developer from Italy.
+  </h1>
   <h2 class="h2">Who am I?</h2>
   <p class="paragraph">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,

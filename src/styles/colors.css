@@ -1,4 +1,8 @@
 :root {
+  --greenAccentColor: #36ff80;
+  --lilleAccentColor: #a78bfa;
+  --blueAccentColor: #22d3ee;
+
   --foregroundColor: #bddbc8;
   --foregroundAlphaColor: #bbf7d05f;
   --headingsColor: #dcfce7;
@@ -8,4 +12,16 @@
 
 .lightMode.greenPalette {
   --foregroundColor: #bddbc8;
+}
+
+.greenPalette {
+  --accentColor: #22d3ee;
+}
+
+.bluePalette {
+  --accentColor: var(--blueAccentColor);
+}
+
+.lillePalette {
+  --accentColor: var(--lilleAccentColor);
 }
