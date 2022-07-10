@@ -16,7 +16,7 @@
       home: HomeContentModel;
     };
   };
-
+  //
   export const load: Load = async ({ fetch }) => {
     try {
       const response = await fetch('https://graphql.datocms.com', {
