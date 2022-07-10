@@ -12,6 +12,8 @@
     color: var(--foregroundColor);
     font-size: responsive 1.125rem 1.75rem;
     font-range: 768px 3840px;
+    position: relative;
+    z-index: 5;
   }
 
   span {

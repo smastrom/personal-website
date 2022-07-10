@@ -1,46 +1,72 @@
+<script context="module" lang="ts">
+  import type { Load } from '@sveltejs/kit';
+
+  type SectionsBlock = {
+    title: string;
+    text: string;
+  };
+
+  type HomeContentModel = {
+    title: string;
+    sections: SectionsBlock[];
+  };
+
+  type DatoResponse = {
+    data: {
+      home: HomeContentModel;
+    };
+  };
+
+  export const load: Load = async ({ fetch }) => {
+    try {
+      const response = await fetch('https://graphql.datocms.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_DATOCMS_READONLY_TOKEN}`
+        },
+        body: JSON.stringify({
+          query: `
+              {
+                home {
+                  title(markdown: true)
+                  sections {
+                    title
+                    text(markdown: true)
+                  }
+                }
+              }`
+        })
+      });
+
+      const {
+        data: { home }
+      }: DatoResponse = await response.json();
+
+      return {
+        props: { home }
+      };
+    } catch (error) {
+      console.log(error);
+      return {
+        props: undefined
+      };
+    }
+  };
+</script>
+
+<script lang="ts">
+  export let home: HomeContentModel;
+</script>
+
 <article>
-  <h1>
-    Hello. <strong>I'm Simone</strong>, a frontend developer based in Italy.
-  </h1>
-  <h2>Who am I?</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
-    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
-    faucibus neque a convallis. <a href="/">Proin</a> laoreet enim eget condimentum scelerisque.
-    Duis vulputate quis nisi sit amet interdum. Donec sit amet cursus mi.
-  </p>
+  {@html home.title}
 
-  <h2>Skills and Tech</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
-    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
-    faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
-    quis nisi sit amet interdum. Donec sit amet cursus mi.
-  </p>
-
-  <h2>Skills and Tech</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
-    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
-    faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
-    quis nisi sit amet interdum. Donec sit amet cursus mi.
-  </p>
-
-  <h2>Skills and Tech</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
-    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
-    faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
-    quis nisi sit amet interdum. Donec sit amet cursus mi.
-  </p>
-
-  <h2>Skills and Tech</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur accumsan leo,
-    at cursus nisi porta ut. Vivamus et aliquam nulla. Nunc et vulputate tellus. Morbi rhoncus
-    faucibus neque a convallis. Proin laoreet enim eget condimentum scelerisque. Duis vulputate
-    quis nisi sit amet interdum. Donec sit amet cursus mi.
-  </p>
+  {#each home.sections as { title, text }}
+    <h2>{title}</h2>
+    {@html text}
+  {/each}
 </article>
 
 <style lang="postcss">
@@ -49,7 +75,7 @@
     position: relative;
   }
 
-  h1 {
+  article :global(h1) {
     margin-top: var(--headerHeight);
     padding: 3rem 0;
     letter-spacing: -0.025ch;
@@ -59,7 +85,7 @@
     font-weight: 800;
     line-height: 1.3;
 
-    & strong {
+    & :global(strong) {
       color: var(--accentColor);
     }
 
@@ -69,7 +95,7 @@
     }
   }
 
-  h2 {
+  article :global(h2) {
     letter-spacing: -0.025ch;
     font-weight: 700;
     font-size: responsive 1.375rem 4.5rem;
@@ -77,7 +103,7 @@
     color: var(--accentColor);
   }
 
-  p {
+  article :global(p) {
     margin: 1rem 0 3rem 0;
     color: var(--foregroundColor);
     font-size: responsive 1.125rem 2.25rem;
@@ -91,14 +117,14 @@
     }
   }
 
-  h2,
-  p {
+  article :global(h2),
+  article :global(p) {
     @media (min-width: 769px) {
       max-width: var(--threeCols);
     }
   }
 
-  a {
+  article :global(a) {
     color: var(--foregroundColor);
     text-decoration: underline;
 
