@@ -87,17 +87,15 @@
 <div
   class="nav"
   dir="rtl"
-  style={`--colorChoices: ${colors.length}`}
+  style={`--colorChoices: ${colors.length}; pointer-events: ${
+    hasJustConfirmed ? 'none' : 'all'
+  }`}
   use:clickOutside
   on:outsideClick={() => (isSelecting = false)}
   bind:this={navElement}
 >
   {#if !isSelecting}
-    <button
-      class="nav-button"
-      style={`pointer-events: ${hasJustConfirmed ? 'none' : 'all'}`}
-      on:click={() => (isSelecting = true)}
-    >
+    <button class="nav-button" on:click={() => (isSelecting = true)}>
       <div class={`button-inner ${palette.split('-')[0]}`}>
         {#if hasJustConfirmed}
           <span out:fade={{ duration: 150 }}>

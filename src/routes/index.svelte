@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+  import { onMount } from 'svelte';
   import type { Load } from '@sveltejs/kit';
 
   type SectionsBlock = {
@@ -16,7 +17,7 @@
       home: HomeContentModel;
     };
   };
-  //
+
   export const load: Load = async ({ fetch }) => {
     try {
       const response = await fetch('https://graphql.datocms.com', {
@@ -58,14 +59,25 @@
 
 <script lang="ts">
   export let home: HomeContentModel;
+
+  onMount(() => {
+    const articleBody = document.querySelector('article');
+
+    articleBody?.querySelectorAll('a').forEach((anchor) => {
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+    });
+  });
 </script>
 
 <article>
   {@html home.title}
 
   {#each home.sections as { title, text }}
-    <h2>{title}</h2>
-    {@html text}
+    <section>
+      <h2>{title}</h2>
+      {@html text}
+    </section>
   {/each}
 </article>
 
@@ -104,7 +116,7 @@
   }
 
   article :global(p) {
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 1.5rem 0;
     color: var(--foregroundColor);
     font-size: responsive 1.125rem 2.25rem;
     letter-spacing: -0.015ch;
@@ -113,7 +125,17 @@
     font-weight: 400;
 
     @media (min-width: 769px) {
-      margin: 1% 0 4.5% 0;
+      margin: 1% 0 2% 0;
+    }
+  }
+
+  article :global(section) {
+    & :global(p:last-of-type) {
+      margin: 1rem 0 3rem 0;
+
+      @media (min-width: 769px) {
+        margin: 1% 0 4.5% 0;
+      }
     }
   }
 
@@ -126,10 +148,28 @@
 
   article :global(a) {
     color: var(--foregroundColor);
+    position: relative;
+    display: inline-flex;
     text-decoration: underline;
 
+    &::after {
+      content: '';
+      background-color: var(--accentColor);
+      bottom: 0.1em;
+      left: -0.1em;
+      right: -0.1em;
+      opacity: 0.25;
+      position: absolute;
+      height: 0.5em;
+      border-radius: 0.2em;
+      transition: height 200ms ease-out;
+      z-index: -1;
+    }
+
     &:hover {
-      color: var(--accentColor);
+      &::after {
+        height: 1.2em;
+      }
     }
   }
 </style>
