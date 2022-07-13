@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import DarkMode from './DarkMode.svelte';
   import GitHub from './GitHubIcon.svelte';
   import Logo from './Logo.svelte';
@@ -77,7 +77,15 @@
     font-weight: 700;
 
     &:hover {
-      color: var(--accentColor);
+      & :global(svg) {
+        transition: stroke 100ms linear;
+      }
+
+      &:hover {
+        & :global(svg) {
+          stroke: var(--foregroundAlphaColor);
+        }
+      }
     }
   }
 </style>

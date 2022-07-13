@@ -60,5 +60,15 @@
     border: none;
     display: flex;
     padding: 10px;
+
+    & :global(svg) {
+      transition: stroke 100ms linear;
+    }
+
+    &:hover {
+      & :global(svg) {
+        stroke: var(--foregroundAlphaColor);
+      }
+    }
   }
 </style>

@@ -61,7 +61,7 @@
       return 'opacity: 0.25;';
     }
     if (childIndex === 0) {
-      return 'opacity: 0.25; pointer-events: none;';
+      return 'opacity: 0.25;';
     }
     return 'opacity: 1;';
   };
@@ -107,13 +107,13 @@
       <button
         type="button"
         style={appendStyles(index)}
+        aria-label={`Switch to ${palette.replace('-', ' ')}`}
+        aria-disabled={index === 0}
+        tabindex={index === 0 ? '-1' : '0'}
         on:click={() => setPalette(palette)}
         in:fly={{ x: 40, duration: 400 }}
         out:fly={{ x: 100, duration: 400 }}
         animate:flip={{ duration: 200, easing: cubicOut }}
-        aria-label={`Switch to ${palette.replace('-', ' ')}`}
-        aria-disabled={index === 0}
-        tabindex={index === 0 ? '-1' : '0'}
       >
         <div class={`button-inner ${palette.split('-')[0]}`}>
           {#if index === 0}
@@ -173,13 +173,12 @@
     justify-content: center;
     border-radius: 100%;
     aspect-ratio: 1;
-
     box-sizing: content-box;
     width: var(--buttonWidth);
     height: var(--buttonWidth);
     border: var(--borderWidth) solid var(--backgroundColor);
     box-shadow: 0 0 0 var(--outlineWidth) var(--foregroundAlphaColor);
-    transition: box-shadow 100ms ease-out, opacity 100ms ease-out;
+    transition: box-shadow 100ms linear, opacity 100ms linear, border-color var(--easing);
 
     &:hover {
       box-shadow: 0 0 0 var(--outlineWidth) var(--foregroundColor);
@@ -198,7 +197,23 @@
     background: var(--lilleAccentColor);
   }
 
-  .green {
-    background: var(--greenAccentColor);
+  :global(.light-mode) {
+    & .green {
+      background: var(--lightGreenAccentColor);
+    }
+
+    & .blue {
+      background: var(--lightBlueAccentColor);
+    }
+  }
+
+  :global(.dark-mode) {
+    & .green {
+      background: var(--greenAccentColor);
+    }
+
+    & .blue {
+      background: var(--blueAccentColor);
+    }
   }
 </style>

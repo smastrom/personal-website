@@ -26,7 +26,7 @@
     border: none;
     display: flex;
     padding: 10px;
-    border: 1px solid var(--foregroundAlphaColor);
+    border: 2px solid var(--foregroundAlphaColor);
     border-radius: 100%;
     backdrop-filter: blur(8px);
     z-index: 10;
@@ -36,8 +36,14 @@
       background-color: var(--backgroundColor);
     }
 
+    & :global(svg) {
+      transition: stroke 100ms linear;
+    }
+
     &:hover {
-      border-color: var(--accentColor);
+      & :global(svg) {
+        stroke: var(--accentColor);
+      }
     }
   }
 </style>

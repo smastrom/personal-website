@@ -108,7 +108,7 @@
     padding: 0.8em 0.6em;
     text-align: center;
     border-radius: 10px;
-    border: 1px solid var(--accentColor);
+    border: 2px solid var(--accentColor);
     color: var(--accentColor);
     font-weight: 700;
     line-height: 1;

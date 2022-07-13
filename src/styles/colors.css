@@ -1,8 +1,9 @@
 :root {
   --greenAccentColor: #36ff80;
-  --darkGreenAccentColor: #22c55e;
-  --lilleAccentColor: #a78bfa;
   --blueAccentColor: #22d3ee;
+  --lilleAccentColor: #a78bfa;
+  --lightGreenAccentColor: #22c55e;
+  --lightBlueAccentColor: #38bdf8;
 }
 
 .dark-mode.green-palette {
@@ -17,7 +18,7 @@
   --foregroundColor: #bdd7db;
   --foregroundAlphaColor: #bceff75f;
   --headingsColor: #dcf8fc;
-  --backgroundColor: #1a3033;
+  --backgroundColor: #1a2633;
   --accentColor: var(--blueAccentColor);
 }
 
@@ -34,21 +35,21 @@
   --foregroundAlphaColor: #2b423a5f;
   --headingsColor: #2b423a;
   --backgroundColor: #f0fdf4;
-  --accentColor: var(--darkGreenAccentColor);
+  --accentColor: var(--lightGreenAccentColor);
 }
 
 .light-mode.blue-palette {
-  --foregroundColor: #bdd7db;
-  --foregroundAlphaColor: #bceff75f;
-  --headingsColor: #dcf8fc;
-  --backgroundColor: #1a3033;
-  --accentColor: var(--blueAccentColor);
+  --foregroundColor: #334155;
+  --foregroundAlphaColor: #3341555f;
+  --headingsColor: #334155;
+  --backgroundColor: #f0fbfd;
+  --accentColor: var(--lightBlueAccentColor);
 }
 
 .light-mode.lille-palette {
-  --foregroundColor: #c4bddb;
-  --foregroundAlphaColor: #cbbcf75f;
-  --headingsColor: #e4dcfc;
-  --backgroundColor: #201a33;
+  --foregroundColor: #3b3355;
+  --foregroundAlphaColor: #3b33555f;
+  --headingsColor: #3b3355;
+  --backgroundColor: #f3f0fd;
   --accentColor: var(--lilleAccentColor);
 }

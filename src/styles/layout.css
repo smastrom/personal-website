@@ -17,7 +17,7 @@ body {
 }
 
 .transitions {
-  --easing: 400ms ease-out;
+  --easing: 300ms ease-out;
   transition: background-color var(--easing);
 
   & a {
