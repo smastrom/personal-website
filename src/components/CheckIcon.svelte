@@ -10,3 +10,9 @@
   stroke-linejoin="round"
   aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg
 >
+
+<style>
+  svg {
+    transition: stroke var(--easing);
+  }
+</style>

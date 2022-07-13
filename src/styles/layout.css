@@ -31,7 +31,7 @@ body {
     transition: background-color var(--easing);
   }
 
-  & article {
+  & & article {
     & h1,
     & h2,
     & p,
