@@ -1,4 +1,4 @@
-<div />
+<div aria-hidden="true" />
 
 <style lang="postcss">
   div {

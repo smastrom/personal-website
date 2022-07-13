@@ -24,7 +24,7 @@
   .email-button {
     position: fixed;
     bottom: 10%;
-    right: 30px;
+    right: var(--gap);
     border: none;
     padding: 10px;
     border: 2px solid var(--foregroundAlphaColor);
