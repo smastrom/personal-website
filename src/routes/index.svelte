@@ -105,7 +105,11 @@
 
     @media (min-width: 769px) {
       max-width: var(--fiveCols);
-      padding: 7% 0 7% 0;
+      padding: 7% 0;
+    }
+
+    @media (min-width: 3840px) {
+      padding: calc(3840px / 100 * 7) 0;
     }
   }
 
@@ -129,6 +133,11 @@
     @media (min-width: 769px) {
       margin: 1% 0 2% 0;
     }
+
+    @media (min-width: 3840px) {
+      --maxSpacingT: calc(3840px / 100 * 1);
+      margin: calc(3840px / 100 * 1) 0 calc(3840px / 100 * 2) 0;
+    }
   }
 
   article :global(section) {
@@ -137,6 +146,10 @@
 
       @media (min-width: 769px) {
         margin: 1% 0 4.5% 0;
+      }
+
+      @media (min-width: 3840px) {
+        margin: calc(3840px / 100 * 1) 0 calc(3840px / 100 * 4.5) 0;
       }
     }
   }

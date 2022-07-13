@@ -178,7 +178,8 @@
     height: var(--buttonWidth);
     border: var(--borderWidth) solid var(--backgroundColor);
     box-shadow: 0 0 0 var(--outlineWidth) var(--foregroundAlphaColor);
-    transition: box-shadow 100ms linear, opacity 100ms linear, border-color var(--easing);
+    transition: box-shadow 100ms linear, opacity 100ms linear, border-color var(--easing),
+      background-color var(--easing);
 
     &:hover {
       box-shadow: 0 0 0 var(--outlineWidth) var(--foregroundColor);
@@ -190,30 +191,30 @@
   }
 
   .blue {
-    background: var(--blueAccentColor);
+    background-color: var(--blueAccentColor);
   }
 
   .lille {
-    background: var(--lilleAccentColor);
+    background-color: var(--lilleAccentColor);
   }
 
   :global(.light-mode) {
     & .green {
-      background: var(--lightGreenAccentColor);
+      background-color: var(--lightGreenAccentColor);
     }
 
     & .blue {
-      background: var(--lightBlueAccentColor);
+      background-color: var(--lightBlueAccentColor);
     }
   }
 
   :global(.dark-mode) {
     & .green {
-      background: var(--greenAccentColor);
+      background-color: var(--greenAccentColor);
     }
 
     & .blue {
-      background: var(--blueAccentColor);
+      background-color: var(--blueAccentColor);
     }
   }
 </style>

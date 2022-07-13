@@ -1,55 +1,55 @@
 :root {
-  --greenAccentColor: #36ff80;
-  --blueAccentColor: #22d3ee;
-  --lilleAccentColor: #a78bfa;
-  --lightGreenAccentColor: #22c55e;
-  --lightBlueAccentColor: #38bdf8;
+	--greenAccentColor: #36ff80;
+	--blueAccentColor: #22d3ee;
+	--lilleAccentColor: #a78bfa;
+	--lightGreenAccentColor: #22c55e;
+	--lightBlueAccentColor: #38bdf8;
 }
 
 .dark-mode.green-palette {
-  --foregroundColor: #bddbc8;
-  --foregroundAlphaColor: #bbf7d05f;
-  --headingsColor: #dcfce7;
-  --backgroundColor: #1a332d;
-  --accentColor: var(--greenAccentColor);
+	--foregroundColor: #bddbc8;
+	--foregroundAlphaColor: #bbf7d05f;
+	--headingsColor: #dcfce7;
+	--backgroundColor: #1a332d;
+	--accentColor: var(--greenAccentColor);
 }
 
 .dark-mode.blue-palette {
-  --foregroundColor: #bdd7db;
-  --foregroundAlphaColor: #bceff75f;
-  --headingsColor: #dcf8fc;
-  --backgroundColor: #1a2633;
-  --accentColor: var(--blueAccentColor);
+	--foregroundColor: #bdd7db;
+	--foregroundAlphaColor: #bceff75f;
+	--headingsColor: #dcf8fc;
+	--backgroundColor: #1a2633;
+	--accentColor: var(--blueAccentColor);
 }
 
 .dark-mode.lille-palette {
-  --foregroundColor: #c4bddb;
-  --foregroundAlphaColor: #cbbcf75f;
-  --headingsColor: #e4dcfc;
-  --backgroundColor: #201a33;
-  --accentColor: var(--lilleAccentColor);
+	--foregroundColor: #c4bddb;
+	--foregroundAlphaColor: #cbbcf75f;
+	--headingsColor: #e4dcfc;
+	--backgroundColor: #201a33;
+	--accentColor: var(--lilleAccentColor);
 }
 
 .light-mode.green-palette {
-  --foregroundColor: #2b423a;
-  --foregroundAlphaColor: #2b423a5f;
-  --headingsColor: #2b423a;
-  --backgroundColor: #f0fdf4;
-  --accentColor: var(--lightGreenAccentColor);
+	--foregroundColor: #2b423a;
+	--foregroundAlphaColor: #2b423a5f;
+	--headingsColor: #2b423a;
+	--backgroundColor: #f0fdf4;
+	--accentColor: var(--lightGreenAccentColor);
 }
 
 .light-mode.blue-palette {
-  --foregroundColor: #334155;
-  --foregroundAlphaColor: #3341555f;
-  --headingsColor: #334155;
-  --backgroundColor: #f0fbfd;
-  --accentColor: var(--lightBlueAccentColor);
+	--foregroundColor: #334155;
+	--foregroundAlphaColor: #3341555f;
+	--headingsColor: #334155;
+	--backgroundColor: #f0fbfd;
+	--accentColor: var(--lightBlueAccentColor);
 }
 
 .light-mode.lille-palette {
-  --foregroundColor: #3b3355;
-  --foregroundAlphaColor: #3b33555f;
-  --headingsColor: #3b3355;
-  --backgroundColor: #f3f0fd;
-  --accentColor: var(--lilleAccentColor);
+	--foregroundColor: #3b3355;
+	--foregroundAlphaColor: #3b33555f;
+	--headingsColor: #3b3355;
+	--backgroundColor: #f3f0fd;
+	--accentColor: var(--lilleAccentColor);
 }
