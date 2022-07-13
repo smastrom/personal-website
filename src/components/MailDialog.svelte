@@ -75,6 +75,10 @@
     justify-content: center;
     padding: var(--gap);
     box-sizing: border-box;
+
+    @supports not (backdrop-filter: blur(12px)) {
+      background-color: var(--backgroundColor);
+    }
   }
 
   .dialog {
@@ -106,11 +110,11 @@
     padding: 0.8em 0.6em;
     text-align: center;
     border-radius: 10px;
-    border: 2px solid var(--accentColor);
+    border: 1px solid var(--accentColor);
     color: var(--accentColor);
     font-weight: 700;
     line-height: 1;
-    transition: background-color 200ms ease-out, color 200ms ease-out;
+    transition: background-color var(--easing), color var(--easing);
 
     &:first-of-type {
       margin: var(--marginBottom) 0;

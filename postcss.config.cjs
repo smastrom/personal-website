@@ -4,7 +4,7 @@ const hoverMediaFeature = require('postcss-hover-media-feature');
 const autoprefixer = require('autoprefixer');
 
 const config = {
-  plugins: [autoprefixer(), postcssNesting({}), responsiveType({}), hoverMediaFeature()]
+  plugins: [autoprefixer(), postcssNesting(), responsiveType(), hoverMediaFeature()]
 };
 
 module.exports = config;

@@ -164,7 +164,7 @@
       position: absolute;
       height: 0.5em;
       border-radius: 0.2em;
-      transition: height 200ms ease-out;
+      transition: height var(--easing);
       z-index: -1;
     }
 

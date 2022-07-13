@@ -26,12 +26,17 @@
     bottom: 10%;
     right: var(--gap);
     border: none;
+    display: flex;
     padding: 10px;
-    border: 2px solid var(--foregroundAlphaColor);
+    border: 1px solid var(--foregroundAlphaColor);
     border-radius: 100%;
     backdrop-filter: blur(8px);
     z-index: 10;
-    transition: border-color 200ms ease-out;
+    transition: border-color var(--easing);
+
+    @supports not (backdrop-filter: blur(8px)) {
+      background-color: var(--backgroundColor);
+    }
 
     &:hover {
       border-color: var(--accentColor);

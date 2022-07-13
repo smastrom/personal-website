@@ -18,9 +18,7 @@
   let audio: HTMLAudioElement;
 
   onMount(() => {
-    audio = new Audio(
-      'https://drive.google.com/uc?export=download&id=1pnTkM6PbJy6NZ_-TY4jAyRBXoiOTbRQa'
-    );
+    audio = new Audio('/swoosh.mp3');
   });
 
   type Palettes = 'green-palette' | 'blue-palette' | 'lille-palette';
@@ -156,10 +154,6 @@
     align-items: center;
   }
 
-  .nav-button {
-    z-index: 20;
-  }
-
   button {
     border: none;
     padding: var(--padding);
@@ -169,23 +163,28 @@
     }
   }
 
+  .nav-button {
+    z-index: 20;
+  }
+
   .button-inner {
     position: relative;
-    transition: opacity 200ms ease-out;
+    transition: opacity var(--easing);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
     aspect-ratio: 1;
+
     box-sizing: content-box;
     width: var(--buttonWidth);
     height: var(--buttonWidth);
     border: var(--borderWidth) solid var(--backgroundColor);
-    outline: var(--outlineWidth) solid var(--foregroundAlphaColor);
-    transition: outline-color 100ms ease-out, opacity 100ms ease-out;
+    box-shadow: 0 0 0 var(--outlineWidth) var(--foregroundAlphaColor);
+    transition: box-shadow 100ms ease-out, opacity 100ms ease-out;
 
     &:hover {
-      outline: var(--outlineWidth) solid var(--foregroundColor);
+      box-shadow: 0 0 0 var(--outlineWidth) var(--foregroundColor);
     }
 
     & span {

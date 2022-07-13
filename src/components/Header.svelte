@@ -37,6 +37,10 @@
     align-items: center;
     z-index: 5;
 
+    @supports not (backdrop-filter: blur(8px)) {
+      background-color: var(--backgroundColor);
+    }
+
     @media (min-width: 1920px) {
       padding: 0 var(--gap);
     }

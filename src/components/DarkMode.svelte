@@ -23,9 +23,7 @@
   let audio: HTMLAudioElement;
 
   onMount(() => {
-    audio = new Audio(
-      'https://drive.google.com/uc?export=download&id=1DeuF3BPygs7S-GhSEh1PyU39SbMVHEep'
-    );
+    audio = new Audio('/toggle.mp3');
   });
 
   const switchTheme = () => {
