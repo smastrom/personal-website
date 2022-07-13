@@ -61,7 +61,7 @@
       return 'opacity: 0.25;';
     }
     if (childIndex === 0) {
-      return 'opacity: 0.25;';
+      return 'opacity: 0.25; pointer-events: none;';
     }
     return 'opacity: 1;';
   };
