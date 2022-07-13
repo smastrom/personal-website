@@ -11,7 +11,12 @@
     <PaletteSwitcher />
     <DarkMode />
     <span />
-    <a href="https://github.com/smastrom" rel="noreferrer" target="_blank" aria-label="GitHub">
+    <a
+      href="https://github.com/smastrom"
+      rel="noreferrer"
+      target="_blank"
+      aria-label="GitHub Profile"
+    >
       <GitHub />
     </a>
   </nav>

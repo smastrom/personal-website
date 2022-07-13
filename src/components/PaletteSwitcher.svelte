@@ -86,6 +86,7 @@
 
 <div
   class="nav"
+  role="group"
   dir="rtl"
   style={`--colorChoices: ${colors.length}; pointer-events: ${
     hasJustConfirmed ? 'none' : 'all'
@@ -95,7 +96,11 @@
   bind:this={navElement}
 >
   {#if !isSelecting}
-    <button class="nav-button" on:click={() => (isSelecting = true)}>
+    <button
+      class="nav-button"
+      on:click={() => (isSelecting = true)}
+      aria-label="Switch palette"
+    >
       <div class={`button-inner ${palette.split('-')[0]}`}>
         {#if hasJustConfirmed}
           <span out:fade={{ duration: 150 }}>
@@ -114,6 +119,8 @@
         in:fly={{ x: 40, duration: 400 }}
         out:fly={{ x: 100, duration: 400 }}
         animate:flip={{ duration: 200, easing: cubicOut }}
+        aria-label={`Switch to ${palette.replace('-', ' ')}`}
+        disabled={index === 0}
       >
         <div class={`button-inner ${palette.split('-')[0]}`}>
           {#if index === 0}
