@@ -1,4 +1,4 @@
-<script context="module">
+<script>
   import DarkMode from './DarkMode.svelte';
   import GitHub from './GitHubIcon.svelte';
   import Logo from './Logo.svelte';

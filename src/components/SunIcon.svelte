@@ -1,4 +1,4 @@
-<script context="module">
+<script>
   import { fly } from 'svelte/transition';
 </script>
 

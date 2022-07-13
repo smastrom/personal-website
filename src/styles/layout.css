@@ -17,10 +17,15 @@ body {
 }
 
 .transitions {
+  --easing: 400ms ease-out;
   transition: background-color var(--easing);
 
   & a {
     transition: color var(--easing);
+  }
+
+  & header {
+    transition: background-color var(--easing);
   }
 
   & article {

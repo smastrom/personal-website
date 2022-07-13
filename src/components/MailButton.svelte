@@ -1,9 +1,7 @@
-<script context="module">
+<script lang="ts">
   import MailIcon from '../components/MailIcon.svelte';
   import MailDialog from './MailDialog.svelte';
-</script>
 
-<script lang="ts">
   let isOpen = false;
 </script>
 

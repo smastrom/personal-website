@@ -1,11 +1,9 @@
-<script context="module">
+<script lang="ts">
   import { onDestroy, onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import { outsideClick } from '../actions/outsideClick';
   import { setNegativeTabIndex } from '../utils/setNegativeTabIndex';
-</script>
 
-<script lang="ts">
   export let isOpen: boolean;
 
   const handleEscapeKey = (event: KeyboardEvent) => {

@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts">
   import { onMount } from 'svelte';
 
   import Moon from './MoonIcon.svelte';
@@ -16,9 +16,7 @@
     }
     return false;
   };
-</script>
 
-<script lang="ts">
   let isDark = getTheme();
   let audio: HTMLAudioElement;
 

@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts">
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   import { flip } from 'svelte/animate';
@@ -8,9 +8,7 @@
 
   import { outsideClick } from '../actions/outsideClick';
   import Check from './CheckIcon.svelte';
-</script>
 
-<script lang="ts">
   let isSelecting = false;
   let hasJustSelected = false;
   let hasJustConfirmed = false;
