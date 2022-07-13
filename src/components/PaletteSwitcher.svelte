@@ -5,12 +5,12 @@
   import { cubicOut } from 'svelte/easing';
 
   import shuffle from 'lodash.shuffle';
+
+  import { outsideClick } from '../actions/outsideClick';
   import Check from './CheckIcon.svelte';
 </script>
 
 <script lang="ts">
-  let navElement: HTMLDivElement;
-
   let isSelecting = false;
   let hasJustSelected = false;
   let hasJustConfirmed = false;
@@ -68,20 +68,6 @@
       document.body.classList.add('transitions');
     });
   });
-
-  const clickOutside = (node: HTMLElement) => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (!node.contains(event.target as HTMLElement) && event.target !== navElement) {
-        node.dispatchEvent(new CustomEvent('outsideClick'));
-      }
-    };
-    document.addEventListener('click', handleOutsideClick, true);
-    return {
-      destroy() {
-        document.removeEventListener('click', handleOutsideClick, true);
-      }
-    };
-  };
 </script>
 
 <div
@@ -91,12 +77,12 @@
   style={`--colorChoices: ${colors.length}; pointer-events: ${
     hasJustConfirmed ? 'none' : 'all'
   }`}
-  use:clickOutside
+  use:outsideClick
   on:outsideClick={() => (isSelecting = false)}
-  bind:this={navElement}
 >
   {#if !isSelecting}
     <button
+      type="button"
       class="nav-button"
       on:click={() => (isSelecting = true)}
       aria-label="Switch palette"
@@ -114,13 +100,15 @@
   {#if isSelecting}
     {#each palettes as palette, index (palette)}
       <button
+        type="button"
         style={appendStyles(index)}
         on:click={() => setPalette(palette)}
         in:fly={{ x: 40, duration: 400 }}
         out:fly={{ x: 100, duration: 400 }}
         animate:flip={{ duration: 200, easing: cubicOut }}
         aria-label={`Switch to ${palette.replace('-', ' ')}`}
-        disabled={index === 0}
+        aria-disabled={index === 0}
+        tabindex={index === 0 ? '-1' : '0'}
       >
         <div class={`button-inner ${palette.split('-')[0]}`}>
           {#if index === 0}

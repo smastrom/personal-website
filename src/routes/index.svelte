@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import type { Load } from '@sveltejs/kit';
 
+  export const router = false;
+
   type SectionsBlock = {
     title: string;
     text: string;

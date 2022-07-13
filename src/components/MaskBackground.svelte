@@ -23,9 +23,6 @@
 
     @media (min-width: 1920px) {
       mask-image: url('/logo-background.svg');
-      mask-position: -100% 50%;
-      mask-repeat: no-repeat;
-      mask-size: 120%;
     }
   }
 </style>

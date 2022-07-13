@@ -5,6 +5,7 @@
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
   import MaskBackground from '../components/MaskBackground.svelte';
+  import MailButton from '../components/MailButton.svelte';
 
   import '../styles/preflight.css';
   import '../styles/responsive-layout.css';
@@ -16,6 +17,7 @@
 {#if browser}
   <Head />
   <Header />
+  <MailButton />
   <MaskBackground />
   <slot />
   <Footer />

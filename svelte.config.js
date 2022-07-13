@@ -8,7 +8,7 @@ const tagsRegex4 = /([>}])[\s]+(<|{[/#:][a-z][^}]*})/g;
 const tagsReplace = '$1$2';
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
   preprocess: preprocess({
     postcss: true,
     replace: [
@@ -23,5 +23,3 @@ const config = {
     adapter: vercel({})
   }
 };
-
-export default config;

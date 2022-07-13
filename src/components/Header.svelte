@@ -27,7 +27,7 @@
     padding: 0 var(--gap);
     display: flex;
     height: var(--headerHeight);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     left: 0;
