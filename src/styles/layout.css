@@ -1,5 +1,9 @@
 :root {
   --easing: 200ms ease-out;
+
+  @media (min-width: 769px) {
+    --easing: 300ms ease-out;
+  }
 }
 
 html {
@@ -17,7 +21,6 @@ body {
 }
 
 .transitions {
-  --easing: 300ms ease-out;
   transition: background-color var(--easing);
 
   & a {
