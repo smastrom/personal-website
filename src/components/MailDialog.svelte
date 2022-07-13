@@ -103,7 +103,7 @@
   }
 
   button {
-    padding: 10px;
+    padding: 0.8em 0.6em;
     text-align: center;
     border-radius: 10px;
     border: 2px solid var(--accentColor);

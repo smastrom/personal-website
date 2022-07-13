@@ -15,6 +15,14 @@
   let hasJustSelected = false;
   let hasJustConfirmed = false;
 
+  let audio: HTMLAudioElement;
+
+  onMount(() => {
+    audio = new Audio(
+      'https://drive.google.com/uc?export=download&id=1pnTkM6PbJy6NZ_-TY4jAyRBXoiOTbRQa'
+    );
+  });
+
   type Palettes = 'green-palette' | 'blue-palette' | 'lille-palette';
   const colors: Palettes[] = ['green-palette', 'blue-palette', 'lille-palette'];
 
@@ -28,6 +36,7 @@
   let palette = localStorage.palette || palettes[0];
 
   const setPalette = (colorCode: Palettes) => {
+    audio.play();
     hasJustSelected = true;
     hasJustConfirmed = true;
     const prevPalette = palette;
